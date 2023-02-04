@@ -153,6 +153,29 @@ main {
     flex-direction: column;
     justify-content: center
   }
+
+  &__sub-title {
+    text-align: start;
+    font-size: 4rem;
+    color: #fff;
+    margin-bottom: 3rem;
+  }
+
+  &__page-section {
+    padding-bottom: 20rem;
+
+    .land-header__sub-title {
+      text-align: start;
+    }
+
+    .land-header__left {
+      justify-content: flex-start;
+
+      .heading__primary{
+        text-decoration: underline;
+      }
+    }
+  }
 }
 
 
@@ -297,6 +320,14 @@ main {
   &__hr {
     background: rgba($color-primary, 0.7);
   }
+}
+
+.breadcrumb__hr {
+  height: 1.5rem;
+}
+
+.bg-about {
+  background: linear-gradient(158.16deg, #FF0D24 5.28%, #CF3034 103.26%);
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
