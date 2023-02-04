@@ -1,0 +1,66 @@
+.heading {
+
+    &__primary {
+        font-size: 5rem;
+        font-weight: 700;
+        letter-spacing: 0px;
+        margin-bottom: 2rem;
+        line-height: 3.6rem;
+
+        background: linear-gradient(158.16deg, #FF0D24 5.28%, #CF3034 103.26%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
+
+        &--white {
+            background: none;
+            -webkit-background-clip: initial;
+            -webkit-text-fill-color: #fff;
+            background-clip: text;
+            text-fill-color: transparent;
+        }
+
+    }
+
+    &__sub-title {
+        font-size: 1.7rem;
+        font-weight: 500;
+        color: $color-secondary;
+    }
+}
+
+.typography {
+    position: relative;
+    text-align: end;
+    align-items: flex-end;
+
+    .heading__primary {
+        padding-right: 15rem;
+    }
+
+    &__hr {
+        bottom: -2rem;
+        height: 2px;
+        position: absolute;
+        right: 14rem;
+        width: 87%;
+        background: $color-primary;
+
+    }
+
+    img {
+        position: absolute;
+        right: 0;
+        width: 15rem;
+        bottom: -10rem;
+        z-index: 3;
+    }
+
+    &--1 {
+        img {}
+    }
+}
+
+
+
