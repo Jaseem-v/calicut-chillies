@@ -102,7 +102,7 @@ html {
   // border-radius: 3rem;
   font-size: 1.4rem;
   color: #fff;
-  padding: 0.67rem 1rem;
+  padding: 0.67rem 2.5rem;
   text-transform: capitalize;
   font-weight: 500;
   letter-spacing: 0.3px;
@@ -208,6 +208,10 @@ html {
       background: $color-primary;
       color: #000;
     }
+  }
+
+  &--red {
+    background: linear-gradient(158.16deg, #FF0D24 5.28%, #CF3034 103.26%) !important;
   }
 }
 
