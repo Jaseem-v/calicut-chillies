@@ -766,8 +766,8 @@
 
         &-text {
             font-weight: 700;
-            font-size: 200px;
-            line-height: 179px;
+            font-size: 18rem;
+            line-height: 1;
             color: #FFFFFF;
             transition: all .2s;
 
@@ -803,7 +803,7 @@
     }
 
     25% {
-        top: 0%;
+        top: -10%;
     }
 
     50% {
@@ -811,7 +811,7 @@
     }
 
     75% {
-        top: 0%;
+        top: -10%;
     }
 
     100% {
@@ -821,7 +821,7 @@
 
 @keyframes textAnimation2 {
     0% {
-        transform: translateY(0);
+        transform: translateY(-10%);
     }
 
     25% {
@@ -829,7 +829,7 @@
     }
 
     50% {
-        transform: translateY(0%);
+        transform: translateY(-10%);
     }
 
     75% {
@@ -837,6 +837,6 @@
     }
 
     100% {
-        transform: translateY(0);
+        transform: translateY(-10%);
     }
 }
