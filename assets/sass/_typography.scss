@@ -5,7 +5,7 @@
         font-weight: 700;
         letter-spacing: 0px;
         margin-bottom: 2rem;
-        line-height: 3.6rem;
+        line-height: 1;
 
         background: linear-gradient(158.16deg, #FF0D24 5.28%, #CF3034 103.26%);
         -webkit-background-clip: text;
@@ -35,32 +35,54 @@
     text-align: end;
     align-items: flex-end;
 
-    .heading__primary {
-        padding-right: 15rem;
-    }
+
 
     &__hr {
-        bottom: -2rem;
         height: 2px;
         position: absolute;
-        right: 14rem;
         width: 87%;
         background: $color-primary;
 
     }
 
+    &--2 {
+        align-items: flex-start;
+
+        img {
+            left: 0;
+            bottom: -10rem;
+        }
+
+        .typography__hr {
+            bottom: -2rem;
+            left: 14rem;
+
+        }
+
+        .heading__primary {
+            padding-left: 15rem;
+        }
+    }
+
     img {
         position: absolute;
-        right: 0;
         width: 15rem;
-        bottom: -10rem;
         z-index: 3;
     }
 
     &--1 {
-        img {}
+        img {
+            right: 0;
+            bottom: -10rem;
+        }
+
+        .typography__hr {
+            bottom: -2rem;
+            right: 14rem;
+        }
+
+        .heading__primary {
+            padding-right: 15rem;
+        }
     }
 }
-
-
-

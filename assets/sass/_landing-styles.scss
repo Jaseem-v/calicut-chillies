@@ -296,8 +296,8 @@
 
         &__sub-title {
             font-weight: 400;
-            font-size: 2.3rem;
-            line-height: 2.9rem;
+            font-size: 2.5rem;
+            line-height: 1.5;
             color: #fff;
 
         }
@@ -543,6 +543,11 @@
                     // background-color: $color-primary;
                     border: none;
                     color: $color-primary;
+                    background: linear-gradient(158.16deg, #FF0D24 5.28%, #CF3034 103.26%);
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    background-clip: text;
+                    text-fill-color: transparent;
                 }
 
                 &.active {
@@ -551,6 +556,12 @@
                     color: $color-primary;
                     font-weight: 700;
                     font-size: 2.1rem;
+
+                    background: linear-gradient(158.16deg, #FF0D24 5.28%, #CF3034 103.26%);
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    background-clip: text;
+                    text-fill-color: transparent;
                 }
             }
         }
@@ -591,6 +602,12 @@
         left: 0;
         bottom: 0;
         transition: all 0.4s linear;
+
+        background: linear-gradient(158.16deg, #FF0D24 5.28%, #CF3034 103.26%);
+        // -webkit-background-clip: text;
+        // -webkit-text-fill-color: transparent;
+        // background-clip: text;
+        // text-fill-color: transparent;
     }
 }
 
@@ -644,17 +661,18 @@
         background-size: cover;
         position: relative;
         background-repeat: no-repeat;
-        &::before{
+
+        &::before {
             content: "";
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(#fff,0.5);
+            background: rgba(#fff, 0.5);
         }
 
-        .cta__title{
+        .cta__title {
             color: #131313;
         }
     }
@@ -708,5 +726,117 @@
         text-transform: capitalize;
         margin-bottom: 1rem;
         margin-top: 2rem;
+    }
+}
+
+/////////////////////////////
+/// mission
+.mission {
+    padding-top: 4rem;
+
+    &__content {
+        padding: 4rem;
+        padding-left: 15rem;
+
+        h5 {
+            // font-size: 2.8rem ;
+        }
+    }
+
+    &__animation {
+        margin: 4rem 0;
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        gap: 3rem;
+        justify-content: center;
+
+        &:hover {
+            .mission__animation-text {
+                &--visible {
+                    transform: translateY(-100%);
+                }
+
+                &--invisible {
+                    top: 0%;
+                }
+            }
+        }
+
+
+        &-text {
+            font-weight: 700;
+            font-size: 200px;
+            line-height: 179px;
+            color: #FFFFFF;
+            transition: all .2s;
+
+            &--visible {
+                animation: textAnimation2 5s infinite;
+
+            }
+
+            &--invisible {
+                position: absolute;
+                padding: 2rem 0;
+                left: 13%;
+                top: 100%;
+                animation: textAnimation 5s infinite;
+            }
+
+
+        }
+
+        &-sub-text {
+            font-weight: 400;
+            font-size: 80px;
+            line-height: 90px;
+
+            color: #FFFFFF;
+        }
+    }
+}
+
+@keyframes textAnimation {
+    0% {
+        top: 100%;
+    }
+
+    25% {
+        top: 0%;
+    }
+
+    50% {
+        top: -100%;
+    }
+
+    75% {
+        top: 0%;
+    }
+
+    100% {
+        top: 100%;
+    }
+}
+
+@keyframes textAnimation2 {
+    0% {
+        transform: translateY(0);
+    }
+
+    25% {
+        transform: translateY(-100%);
+    }
+
+    50% {
+        transform: translateY(0%);
+    }
+
+    75% {
+        transform: translateY(100%);
+    }
+
+    100% {
+        transform: translateY(0);
     }
 }
