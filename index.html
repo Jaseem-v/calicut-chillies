@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
-
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 
     <link rel="stylesheet" href="assets/css/dropzone.min.css">
 
@@ -45,7 +45,7 @@
         <nav class="land-nav" id="land-nav">
             <div class="container">
                 <div class="land-nav__content">
-                    <div class="overlay hidden"></div>
+          
                     <div class="land-nav__menu ">
                         <div class="hamburger" id="hamburger-1">
                             <div class="line"></div>
@@ -81,10 +81,18 @@
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="blog.html">
                                 blog
                             </a>
                         </li>
+
+                        <div class="land-nav__menu ">
+                            <div class="hamburger" id="hamburger-2">
+                                <div class="line"></div>
+                                <div class="line"></div>
+                                <div class="line"></div>
+                            </div>
+                        </div>
                     </ul>
                     <div class="land-nav__buttons">
                         <a href="contact.html" class="land-nav__btn btn land-btn">
@@ -151,14 +159,14 @@
                 </div>
 
                 <div class="row">
-                    <div class="col-md-6 about__left">
+                    <div class="col-lg-6 about__left">
                         <div class="about__left-images">
                             <img src="assets/img/about-1.png" alt="about 1">
                             <img src="assets/img/about-2.png" alt="about 2">
                         </div>
 
                     </div>
-                    <div class="col-md-6 about__right">
+                    <div class="col-lg-6 about__right">
                         <p class="paragraph">
                             Our team of experienced chefs and event planners work closely with each client to create a
                             unique culinary experience tailored to their specific needs and preferences. Whether you're
@@ -194,8 +202,8 @@
                 </div>
 
                 <div class="services__content">
-                    <div class="row">
-                        <div class="col-md-6">
+                    <div class="row row-col-reverse">
+                        <div class="col-lg-6">
                             <div class="services__content-details">
                                 <h1 class="services__title heading__primary heading__primary--white">
                                     Weddings
@@ -211,7 +219,7 @@
                                 </a>
                             </div>
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-lg-6">
                             <div class="services__content-img">
                                 <img src="assets/img/services/1.png" alt="services-1">
                             </div>
@@ -221,12 +229,12 @@
                 <div class="hr"></div>
                 <div class="services__content">
                     <div class="row">
-                        <div class="col-md-6">
+                        <div class="col-lg-6">
                             <div class="services__content-img">
                                 <img src="assets/img/services/2.png" alt="services-2">
                             </div>
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-lg-6">
                             <div class="services__content-details services__content-details--right">
                                 <h1 class="services__title heading__primary heading__primary--white">
                                     Birthday Parties
@@ -248,8 +256,8 @@
                 <div class="hr"></div>
 
                 <div class="services__content">
-                    <div class="row">
-                        <div class="col-md-6">
+                    <div class="row row-col-reverse">
+                        <div class="col-lg-6">
                             <div class="services__content-details">
                                 <h1 class="services__title heading__primary heading__primary--white">
                                     Graduation Parties
@@ -265,7 +273,7 @@
                                 </a>
                             </div>
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-lg-6">
                             <div class="services__content-img">
                                 <img src="assets/img/services/3.png" alt="services-3">
                             </div>
@@ -276,12 +284,12 @@
 
                 <div class="services__content">
                     <div class="row">
-                        <div class="col-md-6">
+                        <div class="col-lg-6">
                             <div class="services__content-img">
                                 <img src="assets/img/services/4.png" alt="services-2">
                             </div>
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-lg-6">
                             <div class="services__content-details services__content-details--right">
                                 <h1 class="services__title heading__primary heading__primary--white">
                                     theme parties
@@ -304,8 +312,8 @@
 
 
                 <div class="services__content">
-                    <div class="row">
-                        <div class="col-md-6">
+                    <div class="row row-col-reverse">
+                        <div class="col-lg-6">
                             <div class="services__content-details">
                                 <h1 class="services__title heading__primary heading__primary--white">
                                     Anniversary
@@ -321,7 +329,7 @@
                                 </a>
                             </div>
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-lg-6">
                             <div class="services__content-img">
                                 <img src="assets/img/services/5.png" alt="services-5">
                             </div>
@@ -379,6 +387,12 @@
                     </div>
 
                 </div>
+
+                <div class="d-flex justify-content-center mt-5">
+                    <a href="contact.html" class="land-nav__btn btn land-btn">
+                        View more <i class="bi bi-arrow-up-right-circle"></i>
+                    </a>
+                </div>
             </div>
         </section>
         <div class="cta section-padding cta--1">
@@ -394,7 +408,7 @@
             </div>
         </div>
 
-        <section class="testimonials section-padding">
+        <section class="testimonials section-padding testimonial--1">
             <div class="container">
                 <div class="heading">
                     <h1 class="heading__primary">
@@ -406,7 +420,7 @@
                 </div>
                 <div class="testimonial__content">
                     <div class="row">
-                        <div class="col-md-6">
+                        <div class="col-lg-6">
                             <div class="testimonial__item">
                                 <div class="row">
                                     <div class="col-md-4">
@@ -428,7 +442,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-lg-6">
                             <div class="testimonial__item">
                                 <div class="row">
                                     <div class="col-md-4">
@@ -450,7 +464,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-lg-6">
                             <div class="testimonial__item">
                                 <div class="row">
                                     <div class="col-md-4">
@@ -471,7 +485,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-lg-6">
                             <div class="testimonial__item">
                                 <div class="row">
                                     <div class="col-md-4">
@@ -497,11 +511,102 @@
                 </div>
             </div>
         </section>
+
+        <section class="testimonials section-padding testimonial--2">
+            <div class="container">
+                <div class="heading">
+                    <h1 class="heading__primary">
+                        Our Testimonials
+                    </h1>
+                    <h5 class="heading__sub-title">
+                        Happy customers
+                    </h5>
+                </div>
+                <div class="testimonial__content">
+                    <div class="swiper testimonial-Swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="testimonial__item">
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <div class="testimonial__img">
+                                                <img src="assets/img/testimonial/1.png" alt="testimonaial">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="testimonial__details">
+                                                <h3 class="paragraph testimonaial__para">
+                                                    "It fits our needs perfectly. Man, this thing is getting better and
+                                                    better as I learn more about it. You've saved our business!"
+
+                                                </h3>
+                                                <h1 class="testimonial__name">Aarush mishra</h1>
+                                                <h4 class="testimonial__place">Alappuzha</h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="testimonial__item">
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <div class="testimonial__img">
+                                                <img src="assets/img/testimonial/1.png" alt="testimonaial">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="testimonial__details">
+                                                <h3 class="paragraph testimonaial__para">
+                                                    "It fits our needs perfectly. Man, this thing is getting better and
+                                                    better as I learn more about it. You've saved our business!"
+
+                                                </h3>
+                                                <h1 class="testimonial__name">Aarush mishra</h1>
+                                                <h4 class="testimonial__place">Alappuzha</h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="testimonial__item">
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <div class="testimonial__img">
+                                                <img src="assets/img/testimonial/1.png" alt="testimonaial">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="testimonial__details">
+                                                <h3 class="paragraph testimonaial__para">
+                                                    "It fits our needs perfectly. Man, this thing is getting better and
+                                                    better as I learn more about it. You've saved our business!"
+
+                                                </h3>
+                                                <h1 class="testimonial__name">Aarush mishra</h1>
+                                                <h4 class="testimonial__place">Alappuzha</h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+            </div>
+        </section>
         <div class="cta section-padding cta--2">
             <div class="container">
                 <div class="cta__content">
                     <h1 class="cta__title">
-                        have you been served by us ,your opinion matters 
+                        have you been served by us ,your opinion matters
                     </h1>
                     <a href="contact.html" class="land-nav__btn btn land-btn btn--red">
                         Tell us what u think <i class="bi bi-arrow-up-right-circle"></i>
@@ -513,7 +618,7 @@
         <section class="contact section-padding">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-6">
+                    <div class="col-lg-6">
                         <div class="contact__content">
                             <div class="heading  heading--left">
                                 <h1 class="heading__primary ">
@@ -535,7 +640,7 @@
                             </form>
                         </div>
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-lg-6">
                         <div class=" contact__map">
 
                             <iframe
@@ -643,6 +748,7 @@
     <script src="assets/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
     <script src="assets/js/dropzone.min.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="assets/dist/main.js"></script>
 
 </body>

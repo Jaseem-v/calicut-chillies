@@ -20,6 +20,34 @@ $(document).ready(function () {
         }
     });
 });
+
+
+var swiper = new Swiper(".testimonial-Swiper", {
+    slidesPerView: 1,
+    spaceBetween: 30,
+    center: true,
+    centeredSlides: true,
+    breakpoints: {
+
+        640: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+        },
+        768: {
+            slidesPerView: 3,
+            spaceBetween: 40,
+        },
+        990: {
+            slidesPerView: 4,
+            spaceBetween: 30,
+        }
+    },
+    autoplay: {
+        delay: 1500,
+        disableOnInteraction: false,
+    },
+    loop: true,
+});
 ////////////////////////
 
 $('input').focus(function () {
@@ -67,21 +95,23 @@ $(window).on('scroll', function () {
 const openBtn = document.querySelector("#hamburger-1")
 const closeBtn = document.querySelector("#hamburger-2")
 const nav_list = document.querySelector(".land-nav")
-const overlay = document.querySelector(".overlay")
 const navContact = document.querySelector(".nav-contact")
-overlay.classList.add("hidden")
 
 function mobileMenu() {
     openBtn.classList.toggle("active");
+    closeBtn.classList.toggle("active");
     nav_list.classList.toggle("active")
 }
 function mobileMenuClose() {
-    openBtn.classList.remove("active");
-    nav_list.classList.remove("active")
+    openBtn.classList.toggle("active");
+    nav_list.classList.toggle("active")
+    closeBtn.classList.toggle("active");
+
 }
 
 
 openBtn.addEventListener("click", mobileMenu)
+closeBtn.addEventListener("click", mobileMenuClose)
 
 
 
