@@ -140,3 +140,9 @@ $(document).ready(function () {
 
 
 
+$('.projects__btn').magnificPopup({
+    type: 'image',
+    gallery: {
+        enabled: true
+    }
+})
