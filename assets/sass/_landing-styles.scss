@@ -40,7 +40,7 @@
                 }
 
                 &__ul {
-                    a {
+                    &-link {
                         color: #000;
 
                         &.active,
@@ -109,6 +109,7 @@
                 z-index: 999999;
                 align-items: flex-start;
                 padding: 4rem;
+                gap: 0;
 
 
                 li {
@@ -129,24 +130,29 @@
                 }
             }
 
-            a {
-                font-size: 1.8rem;
-                color: #fff;
-                font-weight: 600;
-                padding: 1rem 0;
+            &-li {
                 position: relative;
-                transition: all 0.2s ease-in-out;
+                padding: 1rem 0;
+
+                &:hover {
+                    .land-nav__ul-dropdown {
+                        opacity: 1;
+                        visibility: visible;
+                        pointer-events: all;
+                        top: 100%;
+                    }
+                }
 
                 &.active,
                 &:hover {
-                    color: $color-primary;
+
 
                     &::after {
                         content: "";
                         width: 100%;
                         height: 1px;
                         background: $color-primary;
-                        bottom: 0;
+                        bottom: 0%;
                         left: 0;
                         position: absolute;
 
@@ -154,7 +160,106 @@
                             display: none;
                         }
                     }
+
+                    .land-nav__ul-link {
+                        color: $color-primary;
+                    }
                 }
+            }
+
+            &-dropdown {
+                position: absolute;
+                top: 500%;
+                left: 0;
+                width: 200%;
+                background: #FC283C;
+                box-shadow: 0 2px 28px 0 rgba(0, 0, 0, .09);
+                border-radius: 4px;
+                opacity: 0;
+                visibility: hidden;
+                pointer-events: none;
+                transition: all 0.4s ease-in-out;
+
+                @media only screen and (max-width: $bp-992) {
+                    position: relative;
+                    top: auto;
+                    opacity: 1;
+                    visibility: visible;
+                    pointer-events: all;
+                    background: transparent;
+                    gap: 1rem;
+                    margin-top: 1rem;
+                }
+
+                &:hover {
+                    .land-nav__ul-dropdown {
+                        opacity: 1;
+                        visibility: visible;
+                        pointer-events: all;
+                        top: 200%;
+                    }
+                }
+
+                li {
+                    padding: 1.5rem 0;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    &:not(:last-child) {
+                        border-bottom: 1px solid #FF9900;
+
+                        @media only screen and (max-width: $bp-992) {
+                            border-bottom: none;
+                            margin-bottom: 1rem;
+                        }
+                    }
+
+                    @media only screen and (max-width: $bp-992) {
+                        justify-content: flex-start;
+
+                        position: relative;
+                        padding-left: 3rem;
+
+
+                        &::after {
+                            position: absolute;
+                            left: 0;
+                            top: 0;
+                            height: 100%;
+                            content: "";
+                            width: 3px;
+                            background: $color-primary;
+                        }
+                    }
+
+                }
+
+                &-link {
+                    font-weight: 400;
+                    font-size: 1.5rem;
+                    line-height: 1.5;
+                    text-align: center;
+                    letter-spacing: 0.03em;
+                    text-transform: capitalize;
+                    color: #fff;
+
+                    @media only screen and (max-width: $bp-992) {
+                        font-size: 2.4rem;
+                    }
+                }
+            }
+
+
+            &-link {
+                font-size: 1.8rem;
+                color: #fff;
+                font-weight: 600;
+
+                position: relative;
+                transition: all 0.2s ease-in-out;
+
+
 
                 @media only screen and (max-width: $bp-992) {
                     font-weight: 700;
