@@ -862,7 +862,7 @@
     box-shadow: 16.6352px 22.6843px 71.8336px 0.756144px rgba(0, 0, 0, 0.1);
 
     &--2 {
-        background: url(../img/cta-2.png);
+        background: url(../img/cta-image.jpg);
         background-position: center;
         background-size: cover;
         position: relative;
@@ -875,7 +875,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(#fff, 0.5);
+            background: rgba(#000, 0.7);
 
 
             @media only screen and (max-width: $bp-xsmall) {
@@ -884,7 +884,13 @@
         }
 
         .cta__title {
-            color: #131313;
+            // -webkit-text-fill-color: transparent;
+            // text-fill-color: transparent;
+            // background: linear-gradient(158.16deg, #ff0d24 5.28%, #cf3034 103.26%);
+            // -webkit-background-clip: text;
+            // background-clip: text;
+            // font-weight: 700;
+            color:$color-primary;
         }
     }
 
@@ -909,6 +915,17 @@
         position: relative;
         z-index: 1;
     }
+
+    .contact__form {
+        background: #fff;
+        padding: 2rem;
+        border-radius: 5px;
+        box-shadow: 0 2px 28px 0 rgba(0, 0, 0, .09);
+    }
+
+    &__page {
+        margin-top: 8rem;
+    }
 }
 
 ////////////////////////
@@ -928,6 +945,10 @@
         @media only screen and (max-width: $bp-xsmall) {
             display: block;
         }
+    }
+
+    &__page {
+        padding-bottom: 20rem;
     }
 
     &__content {

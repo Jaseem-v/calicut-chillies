@@ -110,9 +110,14 @@
                                 Gallery
                             </a>
                         </li>
-                        <li class="land-nav__ul-li">
+                          <li class="land-nav__ul-li">
                             <a href="blog.html" class="land-nav__ul-link">
                                 blog
+                            </a>
+                        </li>
+                        <li class="land-nav__ul-li">
+                            <a href="testimonial.html" class="land-nav__ul-link">
+                                Testimonials
                             </a>
                         </li>
 
@@ -659,11 +664,19 @@
             <div class="container">
                 <div class="cta__content">
                     <h1 class="cta__title">
-                        have you been served by us ,your opinion matters
+                        Have you been served by us ? <br> your opinion matters
                     </h1>
-                    <a href="contact.html" class="land-nav__btn btn land-btn btn--red">
+                    <!-- <a href="contact.html" class="land-nav__btn btn land-btn btn--red">
                         Tell us what u think <i class="bi bi-arrow-up-right-circle"></i>
-                    </a>
+                    </a> -->
+
+                    <form class="contact__form">
+                        <input type="text" class="contact__form-input" placeholder="Name *">
+                        <input type="text" class="contact__form-input" placeholder="Place">
+                        <textarea name="text-area" id="text-area" cols="30" rows="5" class="contact__form-input"
+                            placeholder="Enter your feedback"></textarea>
+                        <input type="submit" class="land-nav__btn btn land-btn footer__news-letter-btn" value="send">
+                    </form>
                 </div>
             </div>
         </div>
@@ -686,8 +699,7 @@
                                 <input type="text" class="contact__form-input" placeholder="Name *">
                                 <input type="text" class="contact__form-input" placeholder="Phone number *">
                                 <textarea name="text-area" id="text-area" cols="30" rows="5"
-                                    class="contact__form-input">
-                                </textarea>
+                                    placeholder="Enter your message" class="contact__form-input"></textarea>
                                 <input type="submit" class="land-nav__btn btn land-btn footer__news-letter-btn"
                                     value="send">
                             </form>
