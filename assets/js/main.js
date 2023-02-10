@@ -21,33 +21,38 @@ $(document).ready(function () {
     });
 });
 
+const testimonial_div = document.querySelector(".testimonial-Swiper")
+if (
+    testimonial_div
+) {
+    var swiper = new Swiper(".testimonial-Swiper", {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        center: true,
+        centeredSlides: true,
+        breakpoints: {
 
-var swiper = new Swiper(".testimonial-Swiper", {
-    slidesPerView: 1,
-    spaceBetween: 30,
-    center: true,
-    centeredSlides: true,
-    breakpoints: {
+            640: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+            },
+            768: {
+                slidesPerView: 3,
+                spaceBetween: 40,
+            },
+            990: {
+                slidesPerView: 4,
+                spaceBetween: 30,
+            }
+        },
+        autoplay: {
+            delay: 1500,
+            disableOnInteraction: false,
+        },
+        loop: true,
+    });
 
-        640: {
-            slidesPerView: 2,
-            spaceBetween: 20,
-        },
-        768: {
-            slidesPerView: 3,
-            spaceBetween: 40,
-        },
-        990: {
-            slidesPerView: 4,
-            spaceBetween: 30,
-        }
-    },
-    autoplay: {
-        delay: 1500,
-        disableOnInteraction: false,
-    },
-    loop: true,
-});
+}
 ////////////////////////
 
 $('input').focus(function () {

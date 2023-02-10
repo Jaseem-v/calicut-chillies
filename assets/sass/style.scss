@@ -342,6 +342,13 @@ main {
     align-items: center;
     justify-content: space-between;
     margin-top: 4rem;
+    flex-wrap: wrap;
+
+    @media only screen and (max-width: $bp-992) {
+      justify-content: center;
+      column-gap: 5rem;
+      row-gap: 2rem;
+    }
 
     @media only screen and (max-width: $bp-xsmall) {
       flex-direction: column;
@@ -361,9 +368,14 @@ main {
       &:nth-child(2) {
         @media only screen and (max-width: $bp-small) {
           order: 1;
-          max-width: 29rem;
           text-align: center;
         }
+
+        @media only screen and (max-width: $bp-xsmall) {
+          max-width: 29rem;
+        }
+
+
       }
 
       a,

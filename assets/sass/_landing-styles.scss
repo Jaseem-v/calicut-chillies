@@ -315,6 +315,11 @@
                 &__content {
                     padding: 14rem 0 10rem;
 
+                    @media only screen and (max-width: $bp-992) {
+                        padding: 20rem 0 10rem;
+                    }
+
+
                 }
 
                 &__title {
@@ -870,6 +875,10 @@
     &__content {
         padding: 4rem;
         padding-left: 15rem;
+
+        @media only screen and (max-width: $bp-xsmall) {
+            padding-left: 4rem;
+        }
     }
 
     &__animation {
@@ -880,17 +889,6 @@
         gap: 3rem;
         justify-content: center;
 
-        &:hover {
-            .mission__animation-text {
-                &--visible {
-                    transform: translateY(-100%);
-                }
-
-                &--invisible {
-                    top: 0%;
-                }
-            }
-        }
 
 
         &-text {
@@ -899,6 +897,22 @@
             line-height: 1;
             color: #FFFFFF;
             transition: all .2s;
+
+
+            @media only screen and (max-width: $bp-largest) {
+                font-size: 15rem;
+            }
+
+            @media only screen and (max-width: $bp-992) {
+                font-size: 12rem;
+                line-height: 2;
+
+            }
+
+            @media only screen and (max-width: $bp-xsmall) {
+                font-size: 8rem;
+                line-height: 1;
+            }
 
             &--visible {
                 animation: textAnimation2 5s infinite;
@@ -911,6 +925,11 @@
                 left: 13%;
                 top: 100%;
                 animation: textAnimation 5s infinite;
+
+
+                @media only screen and (max-width: $bp-largest) {
+                    left: 5%;
+                }
             }
 
 
@@ -918,10 +937,14 @@
 
         &-sub-text {
             font-weight: 400;
-            font-size: 80px;
-            line-height: 90px;
+            font-size: 8rem;
+            line-height: 1.2;
 
             color: #FFFFFF;
+
+            @media only screen and (max-width: $bp-xsmall) {
+                font-size: 4rem;
+            }
         }
     }
 }
@@ -933,6 +956,10 @@
 
     25% {
         top: -10%;
+
+        @media only screen and (max-width: $bp-largest) {
+            top: 0%;
+        }
     }
 
     50% {
@@ -941,6 +968,10 @@
 
     75% {
         top: -10%;
+
+        @media only screen and (max-width: $bp-largest) {
+            top: 0%;
+        }
     }
 
     100% {
@@ -951,6 +982,11 @@
 @keyframes textAnimation2 {
     0% {
         transform: translateY(-10%);
+
+        @media only screen and (max-width: $bp-largest) {
+            transform: translateY(0%);
+        }
+
     }
 
     25% {
@@ -959,6 +995,11 @@
 
     50% {
         transform: translateY(-10%);
+
+        @media only screen and (max-width: $bp-largest) {
+            transform: translateY(0%);
+        }
+
     }
 
     75% {
@@ -967,6 +1008,11 @@
 
     100% {
         transform: translateY(-10%);
+
+        @media only screen and (max-width: $bp-largest) {
+            transform: translateY(0%);
+        }
+
     }
 }
 
@@ -982,12 +1028,30 @@
         padding: 2rem;
         // border: 0.5px solid #000000;
 
+        @media only screen and (max-width: $bp-xsmall) {
+            border: none;
+            border-bottom: 0.5px solid #000000;
+        }
+
     }
 
     &__row {
         .col-md-4:nth-child(3n) {
             .blog__single-items {
                 border: none;
+
+                @media only screen and (max-width: $bp-xsmall) {
+
+                    border-bottom: 0.5px solid #000000;
+                }
+            }
+        }
+
+        .col-md-4:last-child {
+            .blog__single-items {
+                @media only screen and (max-width: $bp-xsmall) {
+                    border: none;
+                }
             }
         }
     }
