@@ -589,6 +589,10 @@
     &__content {
         margin: 10rem 0 10rem;
 
+        &--page {
+            padding: 8rem 0;
+        }
+
         &-details {
             display: flex;
             flex-direction: column;
@@ -734,6 +738,7 @@
                 color: #131313;
                 font-weight: 400;
                 white-space: nowrap;
+                cursor: pointer;
 
                 &:hover {
                     // background-color: $color-primary;
@@ -890,7 +895,7 @@
             // -webkit-background-clip: text;
             // background-clip: text;
             // font-weight: 700;
-            color:$color-primary;
+            color: $color-primary;
         }
     }
 
@@ -1353,6 +1358,32 @@
                 -ms-transform: translateY(-50%);
                 transform: translateY(-50%);
                 right: 0;
+            }
+        }
+    }
+}
+
+
+
+///////////////////////
+/// single services
+
+.single-services {
+    &__enquire {
+        &-content {
+            display: flex;
+            flex-direction: column;
+            align-items: stretch;
+        }
+        
+        .contact__form {
+            max-width: 50%;
+
+            &-input{
+                color: #fff;
+                &::placeholder{
+                    color: #fff;
+                }
             }
         }
     }

@@ -146,3 +146,4 @@ $('.projects__btn').magnificPopup({
         enabled: true
     }
 })
+

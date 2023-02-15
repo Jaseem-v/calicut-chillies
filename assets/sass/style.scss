@@ -262,6 +262,43 @@ main {
 }
 
 
+
+//////////////////////////////
+/// pagination
+
+#pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5rem;
+  gap: 1rem;
+  li {
+    display: inline;
+
+    a {
+      display: inline-block;
+      text-decoration: none;
+      padding: 0.5rem 1.0rem;
+      color: #000;
+      border-radius: 0.5rem;
+      -webkit-transition: background-color 0.3s;
+      transition: background-color 0.3s;
+      font-size: 1.6rem;
+
+      &.active {
+        background-color: #F81327;
+        color: #fff;
+      }
+
+      &:hover {
+        &:not(.active) {
+          background-color: #ddd;
+        }
+      }
+    }
+  }
+}
+
 ///////////////////////////////////
 /// footer
 /// 
@@ -473,6 +510,10 @@ main {
 
 .bg-about {
   background: linear-gradient(158.16deg, #FF0D24 5.28%, #CF3034 103.26%);
+}
+
+.pb-20{
+  padding-bottom: 20rem
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');

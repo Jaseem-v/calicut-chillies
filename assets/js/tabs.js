@@ -18,27 +18,25 @@ if (document.getElementById("tabs")) {
     $("#tabs .slider").css({ "left": + actPosition.left, "width": actWidth });
 
 
-    const tabs_nav = document.querySelectorAll("#tabs .nav-tabs a")
-    const tabs_pane = document.querySelectorAll("#tabs .tab-pane")
+    const menuButtons = document.querySelector(".nav-tabs");
+    const menuBtn = document.querySelectorAll(".nav-link")
+    if (menuButtons) {
+        menuButtons.addEventListener("click", (e) => {
+            e.preventDefault();
+            if (!e.target.classList.contains("nav-link")) return;
 
+            if (menuBtn)
+                menuBtn.forEach(el => el.classList.remove("active"))
+            e.target.classList.add("active")
 
+            let selector = e.target.dataset.filter
 
-    tabs_nav.forEach((el) => {
+            $(".gallery-content").isotope({
+                filter: `${selector == "all" ? "*" : `.${selector}`}`
+            });
 
-        let tab_id = "road";
-        el.addEventListener("click", (e) => {
-            e.preventDefault()
-            tab_id = e.target.getAttribute("aria-controls");
-            tabs_pane.forEach(el => {
-                el.classList.remove("show")
-                el.classList.remove("active")
-                if (tab_id == el.id) {
-                    console.log("working");
-                    el.classList.add("show")
-                    el.classList.add("active")
-                }
-            })
         })
-    })
+    }
+
 
 }
