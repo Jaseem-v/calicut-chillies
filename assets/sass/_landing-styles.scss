@@ -140,6 +140,10 @@
                         visibility: visible;
                         pointer-events: all;
                         top: 100%;
+
+                        @media only screen and (max-width: $bp-992) {
+                            top: 0%;
+                        }
                     }
                 }
 
@@ -389,7 +393,7 @@
         top: 0;
         position: relative;
         z-index: 1;
-        padding: 20rem 0;
+        padding: 25rem 0;
 
         @media only screen and (max-width: $bp-largest) {
             padding: 15rem 0;
@@ -495,7 +499,7 @@
 
         &__scroll {
             position: absolute;
-            bottom: 5rem;
+            bottom: 15rem;
             left: 50%;
             transform: translate(-50%, -50%);
             z-index: 1;
@@ -576,6 +580,7 @@
 /// services
 .services {
     background: linear-gradient(158.16deg, #FF0D24 5.28%, #CF3034 103.26%);
+    background: #F91227;
 
     &__title {
         text-decoration: underline;
@@ -645,12 +650,13 @@
 
     &-content {
         line-height: 0;
-        -webkit-column-count: 3;
+        -webkit-column-count: 7;
         -webkit-column-gap: 0px;
-        -moz-column-count: 3;
+        -moz-column-count: 7;
         -moz-column-gap: 0px;
         column-count: 4;
         column-gap: 0px;
+        width: 105%;
 
         img {
             width: 100% !important;
@@ -864,7 +870,10 @@
 .cta {
     background: linear-gradient(158.16deg, #FF0D24 5.28%, #CF3034 103.26%);
     border: 0.756144px solid rgba(220, 202, 135, 0.2);
-    box-shadow: 16.6352px 22.6843px 71.8336px 0.756144px rgba(0, 0, 0, 0.1);
+    // box-shadow: 16.6352px 22.6843px 71.8336px 0.756144px rgba(0, 0, 0, 0.1);
+
+    // background: #F91227;
+
 
     &--2 {
         background: url(../img/cta-image.jpg);

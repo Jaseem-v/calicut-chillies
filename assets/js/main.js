@@ -7,17 +7,34 @@ $(document).ready(function () {
     // panning slide stack and the position 'behind'
     // the stack, needed for correct animation style
 
-    var mySwiper = new Swiper(".swiper-container", {
+    var mySwiper = new Swiper(".about__swiper-container", {
         spaceBetween: 1,
-        slidesPerView: 3,
+        slidesPerView: 1,
         centeredSlides: true,
         roundLengths: true,
         loop: true,
         loopAdditionalSlides: 30,
+        speed:1200,
         navigation: {
             nextEl: ".next",
             prevEl: ".prev"
-        }
+        },
+        breakpoints: {
+
+            640: {
+                slidesPerView: 2,
+                spaceBetween: 2,
+            },
+            768: {
+                slidesPerView: 3,
+                spaceBetween: 3,
+            }
+           
+        },
+        autoplay: {
+            delay: 1500,
+            disableOnInteraction: false,
+        },
     });
 });
 

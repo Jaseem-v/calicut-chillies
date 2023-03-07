@@ -11,6 +11,7 @@ if (document.getElementById("tabs")) {
         $("#tabs .nav-tabs a").removeClass("active")
         // event.currentTarget.addClass("active")
         $(event.target).addClass("active");
+        $(".gallery-content").css({ "column-count": 7})
 
     });
     var actWidth = $("#tabs .nav-tabs").find(".active").parent("li").width();
